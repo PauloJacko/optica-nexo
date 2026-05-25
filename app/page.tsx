@@ -1,35 +1,29 @@
 // src/app/page.tsx
 "use client";
 
-import React, { useState } from "react";
-import Navbar from "../components/layout/Navbar"; 
+import React from "react";
 import Hero from "../components/sections/Hero";
 import Benefits from "../components/sections/Benefits";
 import Services from "../components/sections/Services";
-import ContactModal from "../components/sections/Contact";
 
 export default function Home() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const handleHeroClick = () => {
+    const contactSection = document.getElementById("services"); 
+    contactSection?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
-    <main className="flex flex-col min-h-screen w-full relative">
+    <div className="flex flex-col w-full">
       
-      {/* 1. Control del modal desde la barra de navegación */}
-      <Navbar onQuoteClick={openModal} />
+      {/* 1. Zona de bienvenida */}
+      <Hero onQuoteClick={handleHeroClick} />
       
-      {/* 2. Control del modal desde la zona de bienvenida */}
-      <Hero onQuoteClick={openModal} />
-      
+      {/* 2. Beneficios */}
       <Benefits />
       
+      {/* 3. Servicios resumidos */}
       <Services />
-      
-      {/* Ventana Emergente compartida esperando ser activada */}
-      <ContactModal isOpen={isModalOpen} onClose={closeModal} />
 
-    </main>
+    </div>
   );
 }

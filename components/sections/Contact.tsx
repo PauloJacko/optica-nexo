@@ -67,7 +67,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         {/* Cabecera Limpia sin Exceso de Texto */}
         <div className="text-center mb-6">
           <h2 className="text-xl font-bold text-slate-800 tracking-tight">Solicitud de Operativo Óptico</h2>
-          <p className="text-slate-400 text-xs mt-1">Completa los datos de tu organización para coordinar una propuesta técnica.</p>
+          <p className="text-slate-500 text-xs mt-1">Completa los datos de tu organización para coordinar una propuesta técnica.</p>
         </div>
 
         {isSuccess ? (
@@ -80,57 +80,57 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             </div>
             <div>
               <h3 className="text-base font-semibold text-slate-800">¡Datos recibidos!</h3>
-              <p className="text-slate-400 text-xs mt-1 max-w-xs mx-auto">Un asesor clínico se comunicará con tu empresa en un plazo máximo de 2 horas hábiles.</p>
+              <p className="text-slate-500 text-xs mt-1 max-w-xs mx-auto">Un asesor clínico se comunicará con tu empresa a la brevedad.</p>
             </div>
             <button onClick={() => { setIsSuccess(false); onClose(); }} className="mt-2 text-xs font-semibold text-nexo-cyan hover:text-nexo-cyan/80 transition-colors cursor-pointer">
               Volver al inicio
             </button>
           </div>
         ) : (
-          /* Formulario de Entrada Estilizado con Bordes Finos y Fuentes Suaves */
+          /* Formulario de Entrada Estilizado con Etiquetas Más Oscuras y Legibles */
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-[10px] font-semibold uppercase tracking-wider text-slate-400 mb-1">Nombre del Contacto</label>
+              <label className="block text-[10px] font-bold uppercase tracking-wider text-slate-600 mb-1">Nombre del Contacto</label>
               <input 
                 type="text" required placeholder="Ej. Juan Pérez" value={formData.name}
-                className="w-full px-3 py-2 rounded-lg bg-slate-50/50 border border-slate-200/60 focus:outline-none focus:border-nexo-cyan focus:bg-white text-xs font-medium text-slate-700 placeholder-slate-300 transition-all"
+                className="w-full px-3 py-2 rounded-lg bg-slate-50/50 border border-slate-200/60 focus:outline-none focus:border-nexo-cyan focus:bg-white text-xs font-medium text-slate-700 placeholder-slate-400 transition-all"
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               />
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-[10px] font-semibold uppercase tracking-wider text-slate-400 mb-1">Empresa</label>
+                <label className="block text-[10px] font-bold uppercase tracking-wider text-slate-600 mb-1">Empresa</label>
                 <input 
                   type="text" required placeholder="Nombre de la organización" value={formData.company}
-                  className="w-full px-3 py-2 rounded-lg bg-slate-50/50 border border-slate-200/60 focus:outline-none focus:border-nexo-cyan focus:bg-white text-xs font-medium text-slate-700 placeholder-slate-300 transition-all"
+                  className="w-full px-3 py-2 rounded-lg bg-slate-50/50 border border-slate-200/60 focus:outline-none focus:border-nexo-cyan focus:bg-white text-xs font-medium text-slate-700 placeholder-slate-400 transition-all"
                   onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                 />
               </div>
               <div>
-                <label className="block text-[10px] font-semibold uppercase tracking-wider text-slate-400 mb-1">Nº Colaboradores aprox.</label>
+                <label className="block text-[10px] font-bold uppercase tracking-wider text-slate-600 mb-1">Nº Colaboradores aprox.</label>
                 <input 
                   type="number" required placeholder="Cantidad" value={formData.employees}
-                  className="w-full px-3 py-2 rounded-lg bg-slate-50/50 border border-slate-200/60 focus:outline-none focus:border-nexo-cyan focus:bg-white text-xs font-medium text-slate-700 placeholder-slate-300 transition-all"
+                  className="w-full px-3 py-2 rounded-lg bg-slate-50/50 border border-slate-200/60 focus:outline-none focus:border-nexo-cyan focus:bg-white text-xs font-medium text-slate-700 placeholder-slate-400 transition-all"
                   onChange={(e) => setFormData({ ...formData, employees: e.target.value })}
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-[10px] font-semibold uppercase tracking-wider text-slate-400 mb-1">Correo Corporativo</label>
+              <label className="block text-[10px] font-bold uppercase tracking-wider text-slate-600 mb-1">Correo Corporativo</label>
               <input 
                 type="email" required placeholder="ejemplo@empresa.cl" value={formData.email}
-                className="w-full px-3 py-2 rounded-lg bg-slate-50/50 border border-slate-200/60 focus:outline-none focus:border-nexo-cyan focus:bg-white text-xs font-medium text-slate-700 placeholder-slate-300 transition-all"
+                className="w-full px-3 py-2 rounded-lg bg-slate-50/50 border border-slate-200/60 focus:outline-none focus:border-nexo-cyan focus:bg-white text-xs font-medium text-slate-700 placeholder-slate-400 transition-all"
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               />
             </div>
 
             <div>
-              <label className="block text-[10px] font-semibold uppercase tracking-wider text-slate-400 mb-1">Requerimientos o Mensaje</label>
+              <label className="block text-[10px] font-bold uppercase tracking-wider text-slate-600 mb-1">Requerimientos o Mensaje</label>
               <textarea 
                 rows={3} required placeholder="Fechas estimadas, jornadas o dudas operativas..." value={formData.message}
-                className="w-full px-3 py-2 rounded-lg bg-slate-50/50 border border-slate-200/60 focus:outline-none focus:border-nexo-cyan focus:bg-white text-xs font-medium text-slate-700 placeholder-slate-300 resize-none transition-all"
+                className="w-full px-3 py-2 rounded-lg bg-slate-50/50 border border-slate-200/60 focus:outline-none focus:border-nexo-cyan focus:bg-white text-xs font-medium text-slate-700 placeholder-slate-400 resize-none transition-all"
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               />
             </div>
