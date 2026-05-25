@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  /* Forzamos fondo blanco y texto oscuro para la estética corporativa */
+  --background: #ffffff;
+  --foreground: #0A1C3E; /* Azul marino profundo como texto base */
+  
+  /* Paleta oficial de Nexo */
+  --nexo-dark: #0A1C3E;
+  --nexo-cyan: #00A3B1;
+  --nexo-hover: #008b98;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  /* Registramos los colores para usarlos como clases de Tailwind v4 */
+  --color-nexo-dark: var(--nexo-dark);
+  --color-nexo-cyan: var(--nexo-cyan);
+  --color-nexo-hover: var(--nexo-hover);
+  
+  --font-sans: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
