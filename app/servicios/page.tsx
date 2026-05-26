@@ -158,7 +158,7 @@ export default function ServiciosPage() {
                 <div className="space-y-1">
                   <h4 className="font-bold text-amber-900 text-sm sm:text-base">Garantía Técnica de Hasta 6 Meses</h4>
                   <p className="text-amber-800/90 text-xs sm:text-sm font-medium leading-relaxed">
-                    Cubre cualquier defecto de material o errores en la fabricación del product. Ante daños por mal uso accidental, extendemos asesoría técnica preferencial y atractivos descuentos en reparaciones de cristales o marcos.
+                    Cubre cualquier defecto de material o errores en la fabricación del producto. Ante daños por mal uso accidental, extendemos asesoría técnica preferencial y atractivos descuentos en reparaciones de cristales o marcos.
                   </p>
                 </div>
               </div>

@@ -40,7 +40,7 @@ export default function Hero({ onQuoteClick }: HeroProps) {
           </h1>
           
           <p className="text-base sm:text-lg text-slate-600 font-medium leading-relaxed">
-            Evaluaciones clínicas y entrega de lentes operativos directamente en tus installations, cubriendo todo Chile con rapidez y confianza.
+            Evaluaciones clínicas y entrega de lentes operativos directamente en tu empresa, cubriendo todo Chile con rapidez y confianza.
           </p>
           
           {/* BOTONES PREMIUM DIRECTOS */}

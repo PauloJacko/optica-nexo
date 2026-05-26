@@ -18,7 +18,7 @@ export default function Services() {
     {
       step: "03",
       title: "Suministro y Ajuste Ergonómico",
-      desc: "Despachamos, ajustamos y adaptamos los lentes directamente en los puestos de trabajo de la empresa, asegurando cero fricción operativa y máxima productividad visual."
+      desc: "Despachamos y adaptamos los lentes directamente en los puestos de trabajo de la empresa, asegurando la máxima productividad visual."
     }
   ];
 

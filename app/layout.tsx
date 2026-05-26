@@ -4,9 +4,48 @@ import "./globals.css";
 import Header from "../components/layout/Header"; 
 import Footer from "@/components/layout/Footer";
 
+// SEO Expandido sin romper tu configuración original
 export const metadata: Metadata = {
   title: "Óptica Nexo | Salud Visual Empresarial",
-  description: "Servicios ópticos integrales para empresas. Impulsamos la productividad de tus trabajadores cuidando su salud visual.",
+  description: "Servicios ópticos integrales para empresas. Impulsamos la productividad de tus trabajadores cuidando su salud visual mediante operativos directos en tus instalaciones.",
+  keywords: [
+    "operativos opticos empresas chile",
+    "salud visual corporativa",
+    "lentes de seguridad con receta",
+    "optica laboral chile",
+    "operativos oftalmologicos rrhh",
+    "optica nexo",
+    "salud ocupacional visual"
+  ],
+  authors: [{ name: "Óptica Nexo" }],
+  // Para cuando compartas el link por WhatsApp, LinkedIn o Facebook
+  openGraph: {
+    title: "Óptica Nexo | Salud Visual Empresarial",
+    description: "Servicios ópticos integrales para empresas. Impulsamos la productividad cuidando su salud visual.",
+    url: "https://www.opticanexo.cl",
+    siteName: "Óptica Nexo",
+    images: [
+      {
+        url: "/images/operativo.webp",
+        width: 1200,
+        height: 630,
+        alt: "Operativos Ópticos Corporativos Óptica Nexo",
+      },
+    ],
+    locale: "es_CL",
+    type: "website",
+  },
+  // Para visualizaciones en Twitter / X
+  twitter: {
+    card: "summary_large_image",
+    title: "Óptica Nexo | Salud Visual Empresarial",
+    description: "Operativos ópticos directo en empresas en todo Chile.",
+    images: ["/images/operativo.webp"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  }
 };
 
 export default function RootLayout({
