@@ -20,8 +20,8 @@ export default function Hero({ onQuoteClick }: HeroProps) {
 
   return (
     <section 
-      className="w-full relative min-h-[85vh] md:min-h-[80vh] flex items-end md:items-center px-6 sm:px-8 bg-cover bg-[position:75%_center] md:bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/images/operativo.webp')" }}
+      className="w-full relative min-h-[85vh] md:min-h-[80vh] flex items-end md:items-center px-6 sm:px-8 bg-cover bg-[position:85%_center] md:bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/images/operativo.png')" }}
     >
       {/* CAPA DE DEGRADADO ADAPTATIVA */}
       <div className="absolute inset-0 bg-gradient-to-t from-white via-white/95 to-white/30 md:bg-gradient-to-r md:from-white md:via-white/80 md:to-transparent pointer-events-none" />
